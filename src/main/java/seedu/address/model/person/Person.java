@@ -28,6 +28,7 @@ public class Person {
     /**
      * Every field must be present and not null.
      */
+
     public Person(Name name, Phone phone, Email email, Address address, Set<Tag> tags, Remark remark) {
         requireAllNonNull(name, phone, email, address, tags, remark);
         this.name = name;
@@ -62,7 +63,9 @@ public class Person {
         return Collections.unmodifiableSet(tags);
     }
 
-    public Remark getRemark() { return remark; }
+    public Remark getRemark() {
+        return remark;
+    }
 
     /**
      * Returns true if both persons have the same name.
