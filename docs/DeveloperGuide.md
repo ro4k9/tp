@@ -215,9 +215,10 @@ The `markapplicant` mechanism is facilitated by `AddressBook`. `MarkApplicant` e
 and same original Applicant details.  This new Applicant object will replace the current Applicant object that is in the `AddressBook`.
 
 When the user wants to mark an applicant, the user will input `markapplicant` along with the index number of Applicant,
-and the new status value, which includes `pending`, `rejected`, and `accepted`
+and the new status value, which includes `pending`, `rejected`, `interviewed`,and `accepted`.
 
-For example, `markapplicant 1 s/rejected` will change the status of applicant in index 1 to rejected.
+For example, the applicant has the default state of `pending` when it is initialized.
+A command `markapplicant 1 s/rejected` will change the status of applicant in index 1 to rejected.
 
 Given below is an example usage scenario, and how the `markapplicant` mechanism behaves at each step.
 
