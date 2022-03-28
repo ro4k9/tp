@@ -2,14 +2,20 @@
 layout: page
 title: User Guide
 ---
+Welcome to ReCLIne user guide! If you are a new user hoping to transit from your former recruiting system, 
+check out [Quick Start](#quick-start) or if you wish to learn more about reCLIne features or
+have questions, check out [Features](#features) and [FAQ](#faq).
 
-ReCLIne is a **desktop app to organize contacts for recruiters to track, optimized for use via a
+ReCLIne is a **desktop app to organize contacts of applicants for recruiters to track, optimized for use via a
 Command Line Interface** (CLI) while still having the benefits of a Graphical User Interface (GUI).
 If you can type fast, ReCLIne can get your contact management tasks done faster than traditional GUI apps.
 
 * Table of Contents
     * [Quick Start](#quick-start)
     * [Features](#features)
+      * [Help](#help)
+      * [Applicant features](#Applicant_features)
+      * [Job features](#Job_features)
     * [FAQ](#faq)
     * [Command Summary](#command-summary)
 
@@ -50,6 +56,9 @@ If you can type fast, ReCLIne can get your contact management tasks done faster 
 * Words in `UPPER_CASE` are the parameters to be supplied by the user.<br>
   e.g. in `add n/NAME`, `NAME` is a parameter which can be used as `add n/John Doe`.
 
+* An asterisk `*`before the field is compulsory.
+    e.g in `add *n/[NAME]` `NAME` is a compulsory field.
+
 * Items in square brackets are optional.<br>
   e.g `n/NAME [t/TAG]` can be used as `n/John Doe t/friend` or as `n/John Doe`.
 
@@ -69,7 +78,7 @@ If you can type fast, ReCLIne can get your contact management tasks done faster 
 
 </div>
 
-### Viewing help : `help` [coming soon]
+### <a id="help"/> Viewing help : `help`
 
 Shows a message explaning how to access the help page.
 
@@ -77,7 +86,7 @@ Shows a message explaning how to access the help page.
 
 Format: `help`
 
-### Adding an Applicant to the ApplicantList: `addapplicant`
+### <a id="Applicant_features"/>Adding an Applicant to the ApplicantList: `addapplicant`
 
 Adds an applicant to the applicant list of the address book.
 
@@ -122,7 +131,7 @@ To leave out fields, skip the flag and attribute completely.
 
 *flag/[ATTRIBUTE]:*
 
-`[ID*]` : Index number of the applicant that is displayed in the List
+`[ID]` : Index number of the applicant that is displayed in the List
 
 `n/[NAME]`: Updated Applicant's name
 
@@ -168,16 +177,14 @@ If your changes to the data file makes its format invalid, ReCLIne will discard 
 </div>
 
 ### Mark an Applicant: `markapplicant`
- [coming soon]
->>>>>>> master
 
 Mark applicant status.
 
 **Fields:** ID, applicant status
 
-Format: `markapplicant [ID*] s/[STATUS]`
+Format: `markapplicant *[ID] s/[STATUS]`
 
-*flag/[Attribute]*
+*flag/[ATTRIBUTE]:*
 
 `s/[STATUS]`: Flag to mark the applicant status of the applicant. [STATUS] must be either
 pending, accepted, or rejected
@@ -196,12 +203,12 @@ Example:
 - Marks the status of the applicant with ID 106 as accepted.
 
 
-### Adding a Job: `job add` [coming soon]
+### <a id="Applicant_features"/> Adding a Job: `addjob`
 Adds a job attribute
 
-Format: `job add [ID*] ed/[EDUCATION] l/[LOCATION] s/[SALARY] sp/[SPECIALISATION] d/[DURATION]`
+Format: `addjob ed/[EDUCATION] l/[LOCATION] s/[SALARY] sp/[SPECIALISATION] d/[DURATION]`
 
-*flag/[Attribute]:*
+*flag/[ATTRIBUTE]:*
 
 `[ID*]`: Unique ID for the job instance. The ID must be a positive integer 1, 2, 3..
 
@@ -221,16 +228,16 @@ Just enter the flag of the attributes you want to add, followed by the details r
 
 Example:
 
-`job add 231 e/degree in computer science l/Tiong Bahru s/4000`
+`addjob 231 e/degree in computer science l/Tiong Bahru s/4000`
 
 * Add details to a Job ID 231, a Computer Science degree requirement, adds that location of the job
   is at Tiong Bahru and salary of the Job is 4000 a month.
 
-`job add 432 sp/Machine Learning`
+`addjob 432 sp/Machine Learning`
 
 * Add details to a Job ID 432, a Machine Learning field of specialisation.
 
-`job add 32 l/OCBC s/5000 sp/Accountancy d/3`
+`addjob 32 l/OCBC s/5000 sp/Accountancy d/3`
 
 * Add details to Job ID 32, that location of job is at OCBC, salary is 5000 a month, looking for someone with
   specialisation in Accountancy and a contract of 3 years.
@@ -241,19 +248,10 @@ Example:
 
 Format: `job delete [ID] ed/ l/ s/ sp/ d/`
 
-*flag/[Attribute]*
+*flag/[ATTRIBUTE]*
 
 `[ID]` : Unique id for the job instance. The ID must be a positive integer 1, 2, 3,...
 
-`ed/`  : Flag to represent education attribute
-
-`l/` : Flag to represent location attribute
-
-`s/` : Flag to represent salary attribute
-
-`sp/` : Flag to represent specialisation attribute
-
-`d/` : Flag to represent duration attribute
 
 **Tip**: Fill in fields in the stipulated order. Since all the fields are optional except `[ID*]`. Just enter the flag of the attributes you want to delete.
 
@@ -300,7 +298,6 @@ Format: `find KEYWORD [MORE_KEYWORDS]`
 Examples:
 * `find John` returns `john` and `John Doe`
 * `find alex david` returns `Alex Yeoh`, `David Li`<br>
-  ![result for 'find alex david'](images/findAlexDavidResult.png)
 
 ### Clearing all entries : `clear` [coming soon]
 
