@@ -557,8 +557,6 @@ Guarantees:
 
       Use case resumes at step 2.
 
-*{More to be added}*
-
 **Use case: Mark an Applicant job application status as pending.**
 
 **MSS**
@@ -598,9 +596,6 @@ Use case resumes from step 2.
 
       Use case resumes from step 2.
 
-
-*{More to be added}*
-
 **Use case: Edit the date of an Applicant upcoming job interview**
 
 Precondition: Recruiter knows the index of applicant they wish to edit
@@ -630,8 +625,6 @@ Precondition: Recruiter knows the index of applicant they wish to edit
       Steps 1b1-1b2 are repeated until recruiter enters
       correct flag. Use case resumes from step 2.
 
-*{More to be added}*
-
 Use case: List out all job postings in my database
 
 Precondition: Recruiter has previously added job postings
@@ -652,8 +645,6 @@ Extensions
 
       Steps 1a1-1a2 are repeated until recruiter adds a job posting. Use case resumes from step 2.
     
-*{More to be added}*
-
 
 ### Non-Functional Requirements
 
