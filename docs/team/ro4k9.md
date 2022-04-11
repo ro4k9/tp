@@ -77,4 +77,3 @@ Given below are my contributions to the project.
 * **Community**:
     * PRs reviewed (with non-trivial review comments): [\#74](https://github.com/AY2122S2-CS2103T-W15-1/tp/pull/74) [\#104](https://github.com/AY2122S2-CS2103T-W15-1/tp/pull/104) [\#87](https://github.com/AY2122S2-CS2103T-W15-1/tp/pull/87)
     * Helped to fix bug in group member's implementation [\#132](https://github.com/AY2122S2-CS2103T-W15-1/tp/pull/132) [\#153](hhttps://github.com/AY2122S2-CS2103T-W15-1/tp/pull/153)
-    
