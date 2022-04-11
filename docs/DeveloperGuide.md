@@ -656,8 +656,6 @@ able to accomplish most of the tasks faster using commands than using the mouse.
 5. The system should respond within two seconds.
 
 
-*{More to be added}*
-
 ### Glossary
 
 * **Mainstream OS**: Windows, Linux, Unix, OS-X
