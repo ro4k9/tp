@@ -535,64 +535,25 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 ### Use cases
 
-
-**Use case: Mark an Applicant as interviewed**
-
-Precondition: Recruiter knows the applicant contact ID
-
-**MSS**
-
-1. Recruiter requests to mark a specific Applicant as interviewed given their ID and /i flag.
-2. ReCLIne marks the person as interviewed.
-
-    Use case ends.
-
-**Extensions**
-
-* 1a. ID is not given
-
-    * 1a1. ReCLIne shows an error message.
-    * 1a2. Recruiter enters the command with a valid ID
-
-       Use case resumes from step 2.
-
-* 1b. The given ID is invalid.
-
-    * 1b1. ReCLIne shows an error message.
-    * 1b2. Recruiter enters the command with another ID
-
-      Steps 1b1 and 1b2 repeats until Recruiter enters a valid Id. Use case resumes from step 2.
-
-*{More to be added}*
-
-
-
 **Use case: Delete an Applicant Contact**
 
-Precondition: Recruiter knows the applicant contact ID
+Precondition: Recruiter knows the index of applicant in the list
 
 Guarantees:
 -  ReCLine will only delete a contact if the contact exists.
 
 **MSS**
 
-1.  Recruiter indicates that he wants to delete a contact.
-6.  ReCLine deletes indicated contact from database and shows a success message.
+1. Recruiter indicates that he wants to delete a contact.
+2. ReCLine deletes indicated contact from database and shows a success message.
 
     Use case ends
 
 **Extensions**
 
-* 2a.  Indicated contact is not found on the database.
-    * 2a1. ReCLine shows an error message.
-    * 2a2. Recruiter enters new data.
+* 1a. The given index is invalid.
 
-Steps 2a1 – 2a2 are repeated until the contact inputted exists in the database.
-Use case resumes at step 3.
-
-* 3a. The given index is invalid.
-
-    * 3a1. ReCLIne shows an error message.
+    * 1a1. ReCLIne shows an error message.
 
       Use case resumes at step 2.
 
@@ -611,8 +572,7 @@ Use case resumes at step 3.
 **Extensions**
 
 * 1a. Recruiter enters wrong command.
-    * 1a1. ReCLIne responds saying that command is
-      invalid.
+    * 1a1. ReCLIne responds saying that command is invalid.
     * 1a2. Recruiter enters new command.
 
 
@@ -620,7 +580,6 @@ Steps 1a1-1a2 are repeated until recruiter enters
 correct command.
 
 Use case resumes from step 2.
-
 
 * 1b. Recruiter enters wrong format for mark command.
     * 1b1. ReCLIne responds with the correct format for
@@ -631,9 +590,8 @@ Steps 1b1-1b2 are repeated until recruiter enters
 correct format.
 Use case resumes from step 2.
 
-* 1c. Recruiter inputs an applicant that is not found in the
-  address book.
-    * 1c1. ReCLIne responds with invalid applicant.
+* 1c. Recruiter inputs an index out of bounds.
+    * 1c1. ReCLIne responds with invalid index.
     * 1c2. Recruiter enters new command.
       Steps 1c1-1c2 are repeated until recruiter enters
       valid applicant.
@@ -645,7 +603,7 @@ Use case resumes from step 2.
 
 **Use case: Edit the date of an Applicant upcoming job interview**
 
-Precondition: Recruiter knows the applicant contact ID
+Precondition: Recruiter knows the index of applicant they wish to edit
 
 **MSS**
 
@@ -656,13 +614,13 @@ Precondition: Recruiter knows the applicant contact ID
 
 **Extensions**
 
-* 1a. Recruiter inputs an invalid Id
+* 1a. Recruiter inputs an invalid index
 
-    * 1a1. ReCLIne shows an error message saying that Id is invalid.
-    * 1a2. Recruiter enters new edit command with correct Id.
+    * 1a1. ReCLIne shows an error message saying that index is invalid.
+    * 1a2. Recruiter enters new edit command with correct index.
 
       Steps 1a1-1a2 are repeated until recruiter enters
-      valid Id. Use case resumes from step 2.
+      valid index. Use case resumes from step 2.
 
 * 1b. Recruiter enters the wrong flag.
 
@@ -693,14 +651,7 @@ Extensions
     * 1a2. Recruiter adds job posting (if applicable, otherwise stop attempting to list)
 
       Steps 1a1-1a2 are repeated until recruiter adds a job posting. Use case resumes from step 2.
-
-* 1b. Recruiter enters unnecessary/invalid argument
-
-    * 1b1. ReCLIne shows an error message saying that argument is invalid.
-    * 1b2. Recruiter enters new list command without argument.
-
-      Steps 1b1-1b2 are repeated until recruiter removes invalid argument. Use case resumes from step 2.
-
+    
 *{More to be added}*
 
 
